@@ -7,7 +7,7 @@ import AddTodo from '../../components/addTodo';
 
 export default function App() {
   const [todos, setTodos] = useState([
-    
+    {text: 'play on Playstation' , key:'1'}
   ]);
 
   const pressHandler = (key) => {

@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import  Layout  from './Layout';
+import  Layout  from '../constans/Layout';
 import {Dimensions} from 'react-native'
 
 export const Style = StyleSheet.create({

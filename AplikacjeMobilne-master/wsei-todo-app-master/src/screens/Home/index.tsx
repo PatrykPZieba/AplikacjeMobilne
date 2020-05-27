@@ -2,8 +2,7 @@ import React, { FC } from 'react';
 import {  View, Image, Text , StyleSheet } from 'react-native';
 import styled from 'styled-components/native';
 import Constants from 'expo-constants';
-
-import Colors from '../../constans/Colors';
+import Colors from '../../components/Colors';
 
 const WelcomeText = styled.Text`
     margin: 10px 10px;

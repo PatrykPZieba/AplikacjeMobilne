@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {FC} from 'react';
 import {Text, Image, View, ScrollView} from 'react-native';
-import { Style } from '../../constans/Style';
+import { Style } from '../../components/Style';
 
 
 
