@@ -3,6 +3,7 @@ import { StyleSheet, View, FlatList, Alert, TouchableWithoutFeedback, Keyboard }
 import Header from '../../components/header'
 import TodoItem from '../../components/todoItem';
 import AddTodo from '../../components/addTodo';
+  
 
 export default function App() {
   const [todos, setTodos] = useState([

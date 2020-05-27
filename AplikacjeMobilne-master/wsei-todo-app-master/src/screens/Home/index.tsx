@@ -27,7 +27,7 @@ const Home: FC<IHomeProps> = (props) => {
     return (
         <View style={styles.container}>
             <View style={{backgroundColor:'lightgrey', alignItems:'center' , flex:1}}>
-            <WelcomeText>Welcome to HomeScreen of this application</WelcomeText>
+            <WelcomeText>Welcome to HomeScreen </WelcomeText>
             <CustomImage
                 source={require('../../assets/splash2.png')}
             />
