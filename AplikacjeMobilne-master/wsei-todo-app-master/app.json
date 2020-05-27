@@ -13,9 +13,9 @@
     "orientation": "portrait",
     "icon": "./src/assets/logomin.png",
     "splash": {
-      "image": "./src/assets/YoRHa.jpg",
+      "image": "./src/assets/splash2.png",
       "resizeMode": "contain",
-      "backgroundColor": "#FFFFFF"
+      "backgroundColor": "black"
     },
     "updates": {
       "fallbackToCacheTimeout": 0

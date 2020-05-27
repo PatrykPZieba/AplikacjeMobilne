@@ -33,6 +33,9 @@ const Description: FC = () => {
             </Text>
             </View>
             <Image style={[Style.Image3]} source={require('../../assets/cherryTree3.jpg')}></Image>
+
+            <Text style={[Style.fontColor3]}>Lorem ipsum dolor sit amet {"\n"} consectetur  adipisicing elit. {"\n"} Corporis rerum eveniet, {"\n"} voluptatem facere voluptate {"\n"}laudantium in quos veniam{"\n"} architecto quis porro quas, {"\n"}id a ducimus aliquid {"\n"} nesciunt provident sit omnis.</Text>
+            <Image style={[Style.Image4]} source={require('../../assets/fantasy.jpg')}></Image>
         </ScrollView>
     )
 }

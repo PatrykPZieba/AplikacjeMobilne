@@ -13,12 +13,19 @@ export const Style = StyleSheet.create({
         marginLeft:5,
         marginTop:6,
         
+        
     },
     fontColor2: {
         color: '#b20051',
         marginLeft:5,
         textAlign:"center",
         
+    },
+    fontColor3:{
+        color: '#b20051',
+        textAlign:"right",
+        marginRight:3,
+
     },
     title:{
         color: '#b20051',
@@ -56,13 +63,22 @@ export const Style = StyleSheet.create({
     },
     Image3:{
         marginTop:15,
-        marginBottom:5,
+        marginBottom:30,
         height:300,
         width:"95%",
         alignSelf:"center",
 
 
+    },
+    Image4:{
+        height:130,
+        width:'48%',
+        position:"absolute",
+        transform: [{ translateY: 1090 }],
+        
+        
     }
+
    
 
   });

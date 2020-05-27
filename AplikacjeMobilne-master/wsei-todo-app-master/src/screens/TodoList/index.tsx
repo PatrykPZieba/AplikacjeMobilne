@@ -1,27 +1,65 @@
-import React, { FC } from 'react';
-import { Button, View } from 'react-native';
-import styled from 'styled-components/native';
+import React, { useState } from 'react';
+import { StyleSheet, View, FlatList, Alert, TouchableWithoutFeedback, Keyboard } from 'react-native';
+import Header from '../../components/header'
+import TodoItem from '../../components/todoItem';
+import AddTodo from '../../components/addTodo';
 
-import Colors from '../../constans/Colors';
+export default function App() {
+  const [todos, setTodos] = useState([
+    
+  ]);
 
-const WelcomeText = styled.Text`
-    margin: 120px 20px;
-    font-size: 16px;
-    color: ${Colors.black};
-`;
+  const pressHandler = (key) => {
+    setTodos(prevTodos => {
+      return prevTodos.filter(todo => todo.key != key);
+    });
+  };
 
-interface ITodoListProps {}
+  const submitHandler = (text) => {
+    if(text.length > 3){
+    
+      setTodos(prevTodos => {
+        return [
+          { text, key: Math.random().toString() },
+          ...prevTodos
+        ];
+      });
+    } else {
+      Alert.alert('Error', 'Todo must be over 3 characters long', [
+        {text: 'Understood' }
+      ]);
+    }
+  };
 
-const TodoList = ({navigation}) => {
-    return (
-        <View>
-            <WelcomeText>To jest TodoList View</WelcomeText>
-            <Button title="Home screen" onPress={() => {
-                navigation.navigate('Home');
-            }}
+  return (
+    <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
+      <View style={styles.container}>
+        <Header />
+        <View style={styles.content}>
+          <AddTodo submitHandler={submitHandler} />
+          <View style={styles.list}>
+            <FlatList
+              data={todos}
+              renderItem={({ item }) => (
+                <TodoItem item={item} pressHandler={pressHandler} />
+              )}
             />
+          </View>
         </View>
-    );
-};
+      </View>
+    </TouchableWithoutFeedback>
+  );
+}
 
-export default TodoList;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+  content: {
+    padding: 40,
+  },
+  list: {
+    marginTop: 20,
+  },
+});
